@@ -1,0 +1,41 @@
+server:
+  port: 10301
+
+spring:
+  application:
+    name: bicexec-service-scheduler
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/biccw
+    username: postgres
+    password: E30sMGxbP5WzNkhHIo0h 
+
+logging:
+  level: 
+    com: TRACE
+    com.arvato.biccw: INFO  
+
+
+kie:
+  url: http://37.139.121.74:8080/kie-server/services/rest/server
+  user: kieserver
+  password: kieserver1!
+  
+org:
+  quartz:
+    scheduler:
+      instanceName: springBootQuartzApp
+      instanceId: AUTO
+    threadPool:
+      threadCount: 5
+    jobStore: 
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+      useProperties: true
+      misfireThreshold: 60000
+      tablePrefix: qrtz_
+      isClustered: true
+    plugin: 
+      shutdownHook: 
+        class: org.quartz.plugins.management.ShutdownHookPlugin
+        cleanShutdown: TRUE
