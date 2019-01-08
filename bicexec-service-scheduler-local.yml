@@ -10,3 +10,9 @@ kie:
   user: kieserver
   password: kieserver1!
   message: kie still working!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
