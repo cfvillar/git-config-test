@@ -9,5 +9,4 @@ kie:
   url: http://localhost:8080/kie-server/services/rest/server
   user: kieserver
   password: kieserver1!
-  
-message: hello! again and again
+  message: kie working!
