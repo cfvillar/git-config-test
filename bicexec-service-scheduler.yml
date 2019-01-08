@@ -1,9 +1,4 @@
-server:
-  port: 10301
-
 spring:
-  application:
-    name: bicexec-service-scheduler
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/biccw
