@@ -16,3 +16,6 @@ management:
     web:
       exposure:
         include: "*"
+        
+processtimer:
+  message: timer's on!
