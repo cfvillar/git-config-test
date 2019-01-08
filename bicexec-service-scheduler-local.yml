@@ -9,7 +9,7 @@ kie:
   url: http://localhost:8080/kie-server/services/rest/server
   user: kieserver
   password: kieserver1!
-  message: kie still working relaunched!
+  message: kie working!
 
 management:
   endpoints:
